@@ -135,7 +135,7 @@ bool parseHTTP(std::string payload) {
  * @param data 
  * @return int 
  */
-static int cb(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg, struct nfq_data *nfa, void *data) {
+int cb(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg, struct nfq_data *nfa, void *data) {
 	struct nfqnl_msg_packet_hdr *ph;
 	int totalHeaderLength, packetLength, IPHeaderLength;
 	uint8_t* packet;

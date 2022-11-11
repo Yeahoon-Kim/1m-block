@@ -29,4 +29,4 @@ int dropPacket(struct nfq_q_handle *qh, const uint32_t id);
 
 bool parseHTTP(std::string payload);
 
-static int cb(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg, struct nfq_data *nfa, void *data);
+int cb(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg, struct nfq_data *nfa, void *data);

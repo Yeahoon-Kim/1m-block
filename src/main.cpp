@@ -56,7 +56,7 @@ void InterruptHandler(const int signo) {
 /**
  * @brief Set Database
  * 
- * @param fileName 
+ * @param fileName - File name for opening
  * @return true 
  * @return false 
  */
@@ -65,7 +65,8 @@ bool setDB(const string& fileName) {
     string hostName;
 
     size_t idx;
-    
+
+	listFile.open(fileName, fstream::in);
     if(listFile.fail()) {
         cerr << "Error: Error while open file\n";
         cerr << "Please check file name!" << endl;
